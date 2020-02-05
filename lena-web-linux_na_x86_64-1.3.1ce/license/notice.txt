@@ -1,0 +1,6 @@
+
+LG CNS - CTO 아키텍처담당 아키텍처솔루션팀 
+
+Copyright 2018 LG CNS, Inc. All rights reserved.
+
+본 소프트웨어에 사용된 오픈소스 소프트웨어 및 라이선스는 다음과 같습니다.

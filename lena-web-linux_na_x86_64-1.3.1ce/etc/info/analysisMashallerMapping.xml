@@ -1,0 +1,299 @@
+<?xml version="1.0"?>  
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"  
+                         "http://castor.org/mapping.dtd">
+<mapping>
+
+	<!-- Server Rule -->
+	<class name="argo.tie.analysis.rule.model.creator.DiagnosticsServerRule">
+		<map-to xml="server-rule" />
+		<field name="diagnosticsServerRuleItemList" type="argo.tie.analysis.rule.model.DiagnosticsServerRuleItem"
+			collection="arraylist" container="false">
+			<bind-xml name="servers" node="element" />
+		</field>
+	</class>
+
+	<class name="argo.tie.analysis.rule.model.DiagnosticsServerRuleItem">
+		<map-to xml="server" />
+		<field name="serverId" type="string">
+			<bind-xml name="server-id" node="element" />
+		</field>
+		<field name="ruleMappingMap" collection="map">
+			<bind-xml name="rule-mapping-map">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="rule-type" node="attribute" />
+					</field>
+					<field name="value" type="java.lang.String">
+						<bind-xml name="rule-name" node="attribute" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+		<field name="ruleEnableMap" collection="map">
+			<bind-xml name="rule-enable-map">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="rule-type" node="attribute" />
+					</field>
+					<field name="value" type="java.lang.Boolean">
+						<bind-xml name="rule-enable" node="attribute" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+	</class>
+
+	<!-- Issue -->
+	<class name="argo.tie.analysis.rule.model.creator.DiagnosticsIssue">
+		<map-to xml="diagnostics-issue" />
+		<field name="issueItemList" type="argo.tie.analysis.rule.model.IssueItem"
+			collection="arraylist" container="false">
+			<bind-xml name="issues" node="element" />
+		</field>
+	</class>
+
+	<class name="argo.tie.analysis.rule.model.IssueItem">
+		<map-to xml="issue" />
+		<field name="issueName" type="string">
+			<bind-xml name="issue-name" node="element" />
+		</field>
+		<field name="issueCode" type="string">
+			<bind-xml name="issue-code" node="element" />
+		</field>
+		<field name="issueType" type="string">
+			<bind-xml name="issue-type" node="element" />
+		</field>
+		<field name="counterKey" type="int">
+			<bind-xml name="counter-key" node="element" />
+		</field>
+		<field name="derivedResultCode" type="string">
+			<bind-xml name="derived-result-code" node="element" />
+		</field>
+		<field name="solutionCode" type="string">
+			<bind-xml name="solution-code" node="element" />
+		</field>
+	</class>
+
+	<!-- Rule -->
+	<class name="argo.tie.analysis.rule.model.creator.DiagnosticsRule">
+		<map-to xml="diagnostics-rule" />
+		<field name="diagnosticsRuleItemList" type="argo.tie.analysis.rule.model.DiagnosticsRuleItem"
+			collection="arraylist" container="false">
+			<bind-xml name="rules" node="element" />
+		</field>
+	</class>
+
+	<class name="argo.tie.analysis.rule.model.DiagnosticsRuleItem">
+		<map-to xml="rule" />
+		<field name="ruleName" type="string">
+			<bind-xml name="rule-name" node="element" />
+		</field>
+		<field name="ruleType" type="string">
+			<bind-xml name="rule-type" node="element" />
+		</field>
+		<field name="backDataType" type="string">
+			<bind-xml name="backdata-type" node="element" />
+		</field>
+		<field name="conditionMap" collection="map">
+			<bind-xml name="condition-map">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="issue-code" node="attribute" />
+					</field>
+					<field name="value" type="java.lang.Integer">
+						<bind-xml name="limit" node="attribute" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+		<field name="actionCode" type="string">
+			<bind-xml name="action-code" node="element" />
+		</field>
+<!-- 		<field name="dumpInfo" type="string">
+			<bind-xml name="dump-info" node="element" />
+		</field> -->
+		<field name="dumpInfoMap" collection="map">
+			<bind-xml name="dump-info-map">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="dump-type" node="attribute" />
+					</field>
+					<field name="value" type="java.lang.Boolean">
+						<bind-xml name="enable" node="attribute" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+<!-- 		<field name="additionalInfo" type="string">
+			<bind-xml name="additional-info" node="element" />
+		</field> -->
+		<field name="additionalInfoMap" collection="map">
+			<bind-xml name="additional-info-map">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="info-key" node="attribute" />
+					</field>
+					<field name="value" type="java.lang.String">
+						<bind-xml name="info-value" node="attribute" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+		
+	</class>
+
+	<!-- Solution -->
+	<class name="argo.tie.analysis.rule.model.creator.DiagnosticsSolution">
+		<map-to xml="diagnostics-solution" />
+		<field name="solutionItemList" type="argo.tie.analysis.rule.model.SolutionItem"
+			collection="arraylist" container="false">
+			<bind-xml name="solutions" node="element" />
+		</field>
+	</class>
+
+	<class name="argo.tie.analysis.rule.model.SolutionItem">
+		<map-to xml="solution" />
+		<field name="solutionName" type="string">
+			<bind-xml name="solution-name" node="element" />
+		</field>
+		<field name="solutionType" type="string">
+			<bind-xml name="solution-type" node="element" />
+		</field>
+		<field name="solutionCode" type="string">
+			<bind-xml name="solution-code" node="element" />
+		</field>
+		<field name="solutionDesc" type="string">
+			<bind-xml name="solution-desc" node="element" />
+		</field>
+	</class>
+
+	<!-- Report -->
+	<class name="argo.tie.analysis.report.model.DiagnosticsReport">
+		<map-to xml="diagnostics-common-report" />
+		<field name="reportName" type="string">
+			<bind-xml name="report-name" node="element" />
+		</field>
+		<field name="startTime" type="string">
+			<bind-xml name="start-time" node="element" />
+		</field>
+		<field name="endTime" type="string">
+			<bind-xml name="end-time" node="element" />
+		</field>
+		<field name="repetitionNumber" type="int">
+			<bind-xml name="repetition-number" node="element" />
+		</field>
+		<field name="diagnosticsResultHistoryMap" collection="map">
+			<bind-xml name="result-history-map">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="date" node="attribute" />
+					</field>
+					<field name="value" collection="map">
+						<bind-xml name="result">
+							<class name="org.exolab.castor.mapping.MapItem">
+								<field name="key" type="java.lang.String">
+									<bind-xml name="result-type" node="attribute" />
+								</field>
+								<field name="value" type="java.lang.String">
+									<bind-xml name="result" node="attribute" />
+								</field>
+							</class>
+						</bind-xml>
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+		<field name="reportItemList" type="argo.tie.analysis.report.model.DiagnosticsReportItem"
+			collection="arraylist" container="false">
+			<bind-xml name="reports" node="element" />
+		</field>
+	</class>
+
+	<class name="argo.tie.analysis.report.model.DiagnosticsReportItem">
+		<map-to xml="report" />
+		<field name="reportItemSeq" type="int">
+			<bind-xml name="report-item-seq" node="element" />
+		</field>
+		<field name="startTime" type="string">
+			<bind-xml name="start-time" node="element" />
+		</field>
+		<field name="endTime" type="string">
+			<bind-xml name="end-time" node="element" />
+		</field>
+		<field name="diagnosticsResultHistory" collection="map">
+			<bind-xml name="result-history">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="result-type" node="attribute" />
+					</field>
+					<field name="value" type="java.lang.String">
+						<bind-xml name="result" node="attribute" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>	
+		<field name="diagnosticsCheckerResultList"
+				type="argo.tie.analysis.engn.model.checker.DiagnosticsCheckerResult"
+				collection="arraylist" container="false">
+			<bind-xml name="diagnostics-checker-results" node="element" />
+		</field>
+		<field name="threadDump" type="string">
+			<bind-xml name="thread-dump" node="element" />
+		</field>
+		<field name="serviceDump" type="string">
+			<bind-xml name="service-dump" node="element" />
+		</field>
+	</class>
+	
+	<class name="argo.tie.analysis.engn.model.checker.DiagnosticsCheckerResult">
+		<map-to xml="diagnostics-checker-result" />
+		<field name="result" type="string">
+			<bind-xml name="result" node="element" />
+		</field>
+		<field name="ruleType" type="string">
+			<bind-xml name="rule-type" node="element" />
+		</field>
+		<field name="diagnosticsResult">
+			<bind-xml name="diagnostics-result">
+				<class name="argo.tie.analysis.engn.model.checker.DiagnosticsResult">
+					<field name="rootCausesList"
+						type="argo.tie.analysis.engn.model.checker.RootCauseResult"
+						collection="arraylist" container="false">
+						<bind-xml name="root-causes" node="element" />
+					</field>
+					<field name="derivedResultList"
+						type="argo.tie.analysis.engn.model.checker.DerivedIssueResult"
+						collection="arraylist" container="false">
+						<bind-xml name="derived-issues" node="element" />
+					</field>
+					<field name="predictionResultList"
+						type="argo.tie.analysis.engn.model.checker.PredictionIssueResult"
+						collection="arraylist" container="false">
+						<bind-xml name="prediction-issues" node="element" />
+					</field>
+					<field name="solutionList"
+						type="argo.tie.analysis.engn.model.checker.SolutionResult"
+						collection="arraylist" container="false">
+						<bind-xml name="solutions" node="element" />
+					</field>
+					<field name="action" type="string">
+						<bind-xml name="action" node="element" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+		<field name="performanceSnapShotMap" collection="map">
+			<bind-xml name="back-data">
+				<class name="org.exolab.castor.mapping.MapItem">
+					<field name="key" type="java.lang.String">
+						<bind-xml name="key" node="element" />
+					</field>
+					<field name="value" type="java.lang.String">
+						<bind-xml name="value" node="element" />
+					</field>
+				</class>
+			</bind-xml>
+		</field>
+	</class>
+
+</mapping>

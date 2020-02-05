@@ -1,0 +1,14 @@
+[Unit]
+Description=DSCRTEMPLATE
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=USERTEMPLATE
+KillMode=process
+ExecStart=EXECSTARTTEMPLATE
+ExecStop=EXECSTOPTEMPLATE
+WorkingDirectory=WORKDIRTEMPLATE
+
+[Install]
+WantedBy=multi-user.target

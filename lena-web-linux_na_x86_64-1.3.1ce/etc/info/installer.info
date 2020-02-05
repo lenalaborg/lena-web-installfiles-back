@@ -1,0 +1,30 @@
+# default install value
+lena-manager.service-port.default=7700
+lena-manager.monitoring-port.default=16100
+lena-manager.template.dirname=base
+#lena-manager.install-root-path.default=/lenawasapp
+
+lena-se.service-port.default=7000
+lena-se.template.dirname=base
+#lena-se.install-root-path.default=/lenawasapp
+
+lena-ee.service-port.default=7000
+lena-ee.template.dirname=base
+#lena-ee.install-root-path.default=/lenawasapp
+
+apache-server.service-port.default=80
+apache-server.template.dirname=base
+#apache-server.install-root-path.default=/lenawasapp
+
+lena-web.service-port.default=80
+lena-web.template.dirname=base
+#lena-web.install-root-path.default=/lenawasapp
+
+lena-session.service-port.default=5000
+lena-session.secondary-service-port.default=5001
+lena-session.template.dirname=base
+#lena-session.install-root-path.default=/lenawasapp
+
+# etc
+clone.exclude-dir-names=.classes,history,snapshot,logs,work
+filecopy.use.nio=true

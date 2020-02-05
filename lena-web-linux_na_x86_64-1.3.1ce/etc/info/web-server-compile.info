@@ -1,0 +1,46 @@
+# Server base information
+WEB_SERVER_NAME=lena-web-server
+WEB_SERVER_VERSION=1.3.1
+WEB_SERVER_DEPOT_NAME=lena-web
+WEB_FOX_VERSION=0.1.0
+WEB_CMX_VERSION=0.1.0
+
+# oss information for httpd
+HTTPD_VERSION=2.4.41
+HTTPD_FILE_NAME=httpd-2.4.41.tar.gz
+
+HTTPD_22_DEPOT_NAME=apache-server
+HTTPD_22_VERSION=2.2.31
+HTTPD_22_FILE_NAME=httpd-2.2.31.tar.gz
+
+# oss information for tomcat-connectors
+TOMCAT_CONNECTORS_DEPOT_NAME=tomcat-connectors
+TOMCAT_CONNECTORS_VERSION=1.2.46
+TOMCAT_CONNECTORS_FILE_NAME=tomcat-connectors-1.2.46-src.tar.gz
+
+# oss information for apr
+APR_VERSION=1.5.2
+APR_FILE_NAME=apr-1.5.2.tar.gz
+
+# oss information for apr-util
+APR_UTIL_VERSION=1.5.4
+APR_UTIL_FILE_NAME=apr-util-1.5.4.tar.gz
+
+# oss information for openssh
+OPENSSH_VERSION=6.3.p1
+OPENSSH_FILE_NAME=openssh-6.3p1.tar.gz
+
+# oss information for hpnssh
+HPNSSH_VERSION=14v2
+HPNSSH_FILE_NAME=openssh-6.3p1-hpnssh14v2-patched.tar.gz
+
+# projects for build
+BUILD_PROJECTS="web-engine web-connectors web-vela-server web-fox web-cmx web-lsc web-dist"
+
+# template
+TEMPLATE_NAME=2.4/base
+TEMPLATE_NAME_22=2.2/base
+
+# default os packages
+DEFAULT_OS_PACKAGES_22="openssl-devel apr-util-devel make gcc-c++ rsync flex automake libtool"
+DEFAULT_OS_PACKAGES_24="openssl-devel apr-util-devel make gcc-c++ rsync pcre-devel zlib-devel lua-devel bison flex automake libtool"
