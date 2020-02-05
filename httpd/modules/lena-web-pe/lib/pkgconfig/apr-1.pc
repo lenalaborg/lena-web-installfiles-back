@@ -1,0 +1,11 @@
+prefix=${ENGN_HOME}
+exec_prefix=${ENGN_HOME}
+libdir=${prefix}/lib
+APR_MAJOR_VERSION=1
+includedir=${ENGN_HOME}/include
+
+Name: APR
+Description: The Apache Portable Runtime library
+Version: 1.5.2
+Libs: -L${libdir} -lapr-${APR_MAJOR_VERSION} -lrt -lcrypt  -lpthread
+Cflags: -DLINUX -D_REENTRANT -D_GNU_SOURCE -g -O2 -pthread -I${includedir}

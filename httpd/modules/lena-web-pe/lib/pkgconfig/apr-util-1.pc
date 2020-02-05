@@ -1,0 +1,13 @@
+prefix=${ENGN_HOME}
+exec_prefix=${ENGN_HOME}
+libdir=${prefix}/lib
+APRUTIL_MAJOR_VERSION=1
+includedir=${ENGN_HOME}/include
+
+Name: APR Utils
+Description: Companion library for APR
+Version: 1.5.4
+# assume that apr-util requires libapr of same major version
+Requires: apr-1
+Libs: -L${libdir} -laprutil-${APRUTIL_MAJOR_VERSION}  -lexpat
+Cflags: -I${includedir}
