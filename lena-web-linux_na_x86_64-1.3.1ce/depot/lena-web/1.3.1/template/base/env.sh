@@ -54,4 +54,5 @@ elif `uname -r | grep -q amzn2`; then
     export LD_LIBRARY_PATH="${ENGN_HOME}/lib/amzn2:${LD_LIBRARY_PATH}"
 else
     export LD_LIBRARY_PATH="${ENGN_HOME}/lib:${LD_LIBRARY_PATH}"
-fi
+fiexport COMMAND=foreground
+export COMMAND=foreground
